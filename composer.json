@@ -1,0 +1,29 @@
+{
+    "name": "atico/spreadsheet-translator-provider-localfile",
+    "license": "MIT",
+    "type": "library",
+    "description": "Spreadsheet Translator - Library that handles a local spreadsheet file",
+    "keywords": ["Library that handles a local spreadsheet file"],
+    "authors": [
+        {
+            "name": "Samuel Vicent",
+            "email": "samuelvicent@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Atico\\SpreadsheetTranslator\\Provider\\LocalFile\\": "./src"
+        }
+    },
+    "repositories": [{
+        "type": "path",
+        "url": "../../Core",
+        "options": {
+            "symlink": true
+        }
+    }],
+    "require": {
+        "atico/spreadsheet-translator-core": "^1.0",
+        "php": ">=5.5.9"
+    }
+}
