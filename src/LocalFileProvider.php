@@ -17,20 +17,19 @@ use Atico\SpreadsheetTranslator\Core\Resource\Resource;
 
 class LocalFileProvider implements ProviderInterface
 {
-    /** @var LocalFileConfigurationManager $configuration */
-    protected $configuration;
+    protected LocalFileConfigurationManager $configuration;
 
     public function __construct(Configuration $configuration)
     {
         $this->configuration = new LocalFileConfigurationManager($configuration);
     }
 
-    public function getProvider()
+    public function getProvider(): string
     {
         return 'local_file';
     }
 
-    public function handleSourceResource()
+    public function handleSourceResource(): Resource
     {
         $tempLocalSourceFile = $this->configuration->getTempLocalSourceFile();
         copy($this->configuration->getSourceResource(), $tempLocalSourceFile);

@@ -1,5 +1,5 @@
 {
-    "name": "atico/spreadsheet-translator-provider-localfile",
+    "name": "samuelvi/spreadsheet-translator-provider-localfile",
     "license": "MIT",
     "type": "library",
     "description": "Spreadsheet Translator - Library that handles a local spreadsheet file",
@@ -23,7 +23,12 @@
         }
     }],
     "require": {
-        "atico/spreadsheet-translator-core": "^1.0",
-        "php": ">=5.5.9"
+        "samuelvi/spreadsheet-translator-core": "^1.0|^2.0|^8.0",
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.7"
+    },
+    "require-dev": {
+        "rector/jack": "^0.2.9",
+        "rector/rector": "^2.1"
     }
 }
